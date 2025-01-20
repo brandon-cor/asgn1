@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a Point Color</title>
+  </head>
+
+  <body onload="main()">
+    <!-- Canvas for Drawing -->
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+    <!-- Number of Dots Info -->
+    <div id="Num_of_Dots">XXX</div>
+
+    <!-- Controls Section -->
+    <section>
+      <div>
+        <button type="button" id="clearButton">Clear</button>
+      </div>
+
+      <!-- Shape Selection Buttons -->
+      <div>
+        <button type="button" id="pointButton">Point</button>
+        <button type="button" id="triButton">Triangle</button>
+        <button type="button" id="circleButton">Circle</button>
+      </div>
+
+      <!-- Sliders for Color -->
+      <div>
+        <label for="redSlide">Red</label>
+        <input type="range" min="0" max="100" value="100" class="slider"
+          id="redSlide">
+        <label for="greenSlide">Green</label>
+        <input type="range" min="0" max="100" value="100" class="slider"
+          id="greenSlide">
+        <label for="blueSlide">Blue</label>
+        <input type="range" min="0" max="100" value="100" class="slider"
+          id="blueSlide">
+      </div>
+
+      <!-- Sliders for Size and Segments -->
+      <div>
+        <label for="sizeSlide">Size</label>
+        <input type="range" min="5" max="40" value="0" class="slider"
+          id="sizeSlide">
+        <label for="segSlide">(Circles) Segment Count</label>
+        <input type="range" min="5" max="40" value="0" class="slider"
+          id="segSlide">
+      </div>
+
+      <!-- Paint a Dog Button -->
+      <div>
+        <button type="button" id="dogButton">Paint a Dog!</button>
+      </div>
+    </section>
+
+    <!-- Description -->
+    <section>
+      <p>
+        I implemented a performance display to provide real-time feedback on the
+        application's rendering efficiency. These additions help monitor and
+        optimize the drawing process, ensuring a responsive and efficient user
+        experience.
+      </p>
+    </section>
+
+    <!-- Scripts -->
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Point.js"></script>
+    <script src="Circle.js"></script>
+    <script src="ColoredPoints.js"></script>
+  </body>
+</html>
